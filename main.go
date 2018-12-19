@@ -50,7 +50,7 @@ func main() {
 
 	currentDir, err := os.Getwd()
 	check(err)
-	file, err := os.Create(currentDir + "/tempcreds")
+	file, err := os.Create(currentDir + fmt.Sprintf("/%s_creds", *sessionToken))
 	check(err)
 	defer file.Close()
 
