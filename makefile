@@ -3,7 +3,7 @@ all:
 	upx --brute assuminator
 
 release_build:
-	gox -os="linux";
+	gox -os="linux" --output "{{.Dir}}_{{.OS}}_{{.Arch}}";
 	for BIN in $(ls ./bin/); do upx --brute "./bin/${BIN}"; done
 
 local:

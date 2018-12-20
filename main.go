@@ -24,7 +24,7 @@ func check(e error) {
 func main() {
 	targetRole := flag.String("target-arn", "", "ARN of the role to assume.")
 	sessionToken := flag.String("session-token", "", "Session token ID")
-	sessionDuration := flag.Int64("", 900, "Duration of assumed role session in seconds")
+	sessionDuration := flag.Int64("duration", 900, "Duration of assumed role session in seconds")
 	flag.Parse()
 
 	if *targetRole == "" {
